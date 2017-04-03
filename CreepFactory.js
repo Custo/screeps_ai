@@ -7,30 +7,45 @@ var CreepFactory = {
     },
 
     createHarvester: function() {
-        var nameMain = "Harvester"
         var idx = 1
-        while(Game.spawns.MainSpawn.createCreep([WORK, WORK, WORK, WORK, CARRY, CARRY, CARRY, CARRY, MOVE, MOVE, MOVE],
-                                                nameMain + idx,
+        while(Game.spawns.MainSpawn.createCreep([WORK, CARRY, CARRY, MOVE, MOVE],
+                                                "Harvester" + idx,
                                                 { role: "harvester"}) == ERR_NAME_EXISTS) {
             idx += 1
         }
 	},
 	
-	createBuilder: function() {
-	    var nameMain = "Builder"
+	createMiner: function() {
         var idx = 1
-        while(Game.spawns.MainSpawn.createCreep([WORK, WORK, WORK, WORK, CARRY, CARRY, CARRY, MOVE, MOVE, MOVE],
-                                                nameMain + idx,
+        while(Game.spawns.MainSpawn.createCreep([WORK, WORK, CARRY, MOVE],
+                                                "Miner" + idx,
+                                                { role: "miner"}) == ERR_NAME_EXISTS) {
+            idx += 1
+        }
+	},
+	
+	createCarrierr: function() {
+        var idx = 1
+        while(Game.spawns.MainSpawn.createCreep([CARRY, CARRY, CARRY, MOVE, MOVE, MOVE],
+                                                "Carrier" + idx,
+                                                { role: "carrier"}) == ERR_NAME_EXISTS) {
+            idx += 1
+        }
+	},
+	
+	createBuilder: function() {
+        var idx = 1
+        while(Game.spawns.MainSpawn.createCreep([WORK, CARRY, CARRY, MOVE, MOVE],
+                                                "Builder" + idx,
                                                 { role: "builder"}) == ERR_NAME_EXISTS) {
             idx += 1
         }
 	},
 	
 	createUpgrader: function() {
-	    var nameMain = "Upgrader"
         var idx = 1
-        while(Game.spawns.MainSpawn.createCreep([WORK, WORK, WORK, CARRY, CARRY, CARRY, CARRY, CARRY, MOVE, MOVE, MOVE, MOVE],
-                                                nameMain + idx,
+        while(Game.spawns.MainSpawn.createCreep([WORK, CARRY, CARRY, MOVE, MOVE],
+                                                "Upgrader" + idx,
                                                 { role: "upgrader"}) == ERR_NAME_EXISTS) {
             idx += 1
         }
