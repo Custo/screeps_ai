@@ -33,7 +33,7 @@ module.exports.loop = function () {
     // Make sure there are always creeps
     var desiredHarvesterCount = 0
     var desiredMinerCount = 2
-    var desiredCarrierCount = 0
+    var desiredCarrierCount = 3
     var desiredBuilderCount = 3
     var desiredUpgraderCount = 5
     

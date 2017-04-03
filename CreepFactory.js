@@ -24,7 +24,7 @@ var CreepFactory = {
         }
 	},
 	
-	createCarrierr: function() {
+	createCarrier: function() {
         var idx = 1
         while(Game.spawns.MainSpawn.createCreep([CARRY, CARRY, CARRY, MOVE, MOVE, MOVE],
                                                 "Carrier" + idx,
